@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+__src/app/favicon.ico
+__src/app/layout.tsx
+__src/app/page.tsx
