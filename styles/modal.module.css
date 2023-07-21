@@ -1,58 +1,92 @@
+/* modal.moduls.css */
+
 .modal {
+    display: flex;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonsDivTop {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
-}
-
-.imageContainer {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.closeButton,
-.prevButton,
-.nextButton {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 40px; 
+    width: 100%;
+}
+
+.closeButton {
+    position: absolute;
+    right: 20px;
     background-color: transparent;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+.buttonsDivBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 20px; 
+    width: 80%;
 }
 
 .prevButton {
-    left: 10px;
-}
-
-.imageContainer button {
-    font-size: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: none;
+    margin-left: 20px;
+    background-color: transparent;
     color: white;
-    padding: 5px 10px;
+    border: none;
     cursor: pointer;
+    /* font-size: 1.5rem; */
+    font-size: 3rem;
+    
 }
 
-.imageContainer button:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.nextButton {
+    margin-right: 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    /* font-size: 1.5rem; */
+    font-size: 3rem;
+    
 }
 
-.imageContainer button:focus {
-    outline: none;
+.closeButton::after {
+    content: "X"; /* Unicode 문자로 왼쪽 화살표 아이콘 */
+}
+
+.prevButton::after {
+    content: "\00AB"; /* Unicode 문자로 왼쪽 화살표 아이콘 */
+}
+
+.nextButton::after {
+    content: "\00BB"; /* Unicode 문자로 오른쪽 화살표 아이콘 */
+}
+
+.modalContent {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.sliderWrapper {
+    height: 100%;
+}
+
+.slideItem {
+    overflow: hidden;
+    touch-action: none;
 }

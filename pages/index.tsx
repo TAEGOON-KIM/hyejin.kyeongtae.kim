@@ -1,53 +1,10 @@
+/* index.tsx */
 import Image from 'next/image'
 import styles from '../styles/page.module.css'
 import Modal from '../components/modal';
 import React, { useState } from 'react';
 
 export default function Home() {
-    const divStyle: React.CSSProperties = {
-        display: 'inline-block',
-        maxWidth: '100%',
-        overflow: 'hidden',
-        position: 'relative',
-        boxSizing: 'border-box',
-        margin: 0,
-        borderRadius: '30px', // 라운드 처리
-      };
-
-    const divStyle2: React.CSSProperties = {
-        display: 'block',
-        maxWidth: '100%',
-        boxSizing: 'border-box',
-    };
-
-    const coverImgStyle: React.CSSProperties = {
-        display: 'block',
-        maxWidth: '100%',
-        padding: 0,
-        margin: 0,
-        border: 'none',
-    };
-
-    const coverPictureStyle: React.CSSProperties = {
-        position: 'absolute',
-        inset: 0,
-        boxSizing: 'border-box',
-        padding: 0,
-        border: 'none',
-        margin: 'auto',
-        display: 'block',
-        width: 0,
-        height: 0,
-        minWidth: '100%', // 쉼표(,) 빠진 것 수정
-        maxWidth: '100%', // 쉼표(,) 빠진 것 수정
-        minHeight: '100%', // 쉼표(,) 빠진 것 수정
-        maxHeight: '100%', // 쉼표(,) 빠진 것 수정
-        filter: 'none',
-        backgroundSize: 'cover', // camelCase 형식으로 수정
-        backgroundImage: 'none', // camelCase 형식으로 수정
-        backgroundPosition: '0% 0%', // camelCase 형식으로 수정
-    };
-
     const photos = [
         '/photos/p0.jpg',
         '/photos/p1.jpg',
@@ -65,6 +22,12 @@ export default function Home() {
     ];
 
     const [showModal, setShowModal] = useState(false);
+    const [showMapModal, setShowMapModal] = useState(false);
+
+    const groomName = "경태";
+    const brideName = "혜진";
+    const kakaoMapText1 = " 카카오맵";
+    const naverMapText1 = " 네이버지도";
 
     const handleImageClick = () => {
         setShowModal(true);
@@ -74,6 +37,19 @@ export default function Home() {
         setShowModal(false);
     };
 
+    const handleMapImageClick = () => {
+        setShowMapModal(true);
+    };
+
+    const handleCloseMapModal = () => {
+        setShowMapModal(false);
+    };
+
+    const nameStyle: React.CSSProperties = {
+        paddingLeft: '10px',
+        fontSize: '20px'
+    };
+
     return (
         <main className={styles.main}>
             <h1 className={styles.header}>
@@ -81,20 +57,15 @@ export default function Home() {
             </h1>
             
             <div className={styles.coverPicWrap}>
-                <div style={divStyle}>
-                    {/* <div style={divStyle2}>
-                        <img style={coverImgStyle} alt="" aria-hidden="true" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4MCIgaGVpZ2h0PSIxOTIwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="/>
-                    </div> */}
-
-                    <div style={divStyle2}>    
-                        {/* 4:3 비율의 SVG 이미지 */}
-                        <svg style={coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="100%" height="100%">
-                            {/* <circle cx="2" cy="1.5" r="1.2" fill="red" /> */}
+                <div className={styles.divStyle}>
+                    <div className={styles.divStyle2}>    
+                        <svg className={styles.coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="100%" height="100%">
+                            <circle cx="2" cy="1.5" r="1.2" fill="red" />
                         </svg>
                     </div>
 
                     <Image
-                        style={coverPictureStyle}
+                        className={styles.coverPictureStyle}
                         src="/images/cover.jpg"
                         alt=""
                         width={100}
@@ -103,25 +74,45 @@ export default function Home() {
                         objectFit="cover"
                     />
                 </div>
+
+                {/* <div className={styles.coverHeader}>
+                    <span>김경태</span>
+                    <hr />
+                    <span>김혜진</span>
+                </div> */}
+
             </div>
 
             <div className={styles.description}>
                 <p>
-                    2024년 5월 4일 토요일 오후 1시 10분<br/>부천 MJ 컨벤션 5층 그랜드볼룸
+                    2024년 5월 4일 토요일 오후 1시 10분<br/>MJ 컨벤션 5층 그랜드볼룸
                 </p>
-                <hr className={styles.main}/>
             </div>
             
+            <hr className={styles.main}/>
+            
             <h2>결혼합니다.</h2>
+            
+            <p className={styles.comment}>
+                봄의 그대는 벚꽃이었고<br/>
+                여름의 그대는 바람이었으며<br/>
+                가을의 그대는 하늘이었고<br/>
+                겨울의 그대는 하얀 눈이었다<br/>
+                그대는 언제나 행복, 그 자체였다<br/>
+
+                - 강현욱, 사계 中 -<br/><br/>
+
+                초록빛 싱그러움이 가득한 5월의 봄날,<br/>
+                사랑하는 두 사람이 같은 곳을 바라보며<br/>
+                평생 함께 걷고자 합니다.<br/>
+                아름답고 행복한 가정 가꾸어 나갈 수 있도록<br/>
+                부디 자리하시어 축복해 주시면<br/>
+                더없는 기쁨으로 간직하겠습니다.
+            </p>
 
             <p className={styles.comment}>
-                따뜻한 5월의 봄날<br/>
-                풀꽃 향기 그윽한 봄 햇살 아래서<br/>
-                사랑하는 두 사람이 하나의 가정을 이루는 날<br/>
-                부디 자리하시어 축복해 주시면<br/>더없는 감사의 자리가 되겠습니다.
-            </p>
-            <p className={styles.comment}>
-                김완태 · 정민화의 차남 경태<br/>김영길 · 최종랑의 장녀 혜진
+                <span>김완태 · 정민화</span> 의 차남 <span style={nameStyle}>{groomName}</span> <br/>
+                <span>김영길 · 최종랑</span> 의 장녀 <span style={nameStyle}>{brideName}</span>
             </p>
 
             <hr className={styles.main}/>
@@ -132,46 +123,6 @@ export default function Home() {
                         <img src={photo} loading="lazy" alt="Photo" className={styles.image} onClick={handleImageClick} />
                     </li>
                 ))}
-                
-                {/* <li>
-                    <img role="button" src="/photos/p0.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p1.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p2.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p3.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p4.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p5.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p6.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p7.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p8.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p9.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p10.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p11.jpg" loading="lazy" alt=""/>
-                </li>
-                <li>
-                    <img role="button" src="/photos/p12.jpg" loading="lazy" alt=""/>
-                </li> */}
             </ul>
 
             {showModal && <Modal images={photos} onClose={handleCloseModal} />}
@@ -180,13 +131,110 @@ export default function Home() {
 
             <h2>오시는 길</h2>
 
+            <div className={styles.mapPicWrap}>
+                <div className={styles.mapDivStyle}>
+                    <div className={styles.mapDivStyle2}>
+                        <svg className={styles.mapImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3111 1497" width="100%" height="100%">
+                            <circle cx="2" cy="1.5" r="1.2" fill="red" />
+                        </svg>
+                    </div>
+
+                    <Image
+                        className={styles.mapPictureStyle}
+                        src="/images/map.png"
+                        alt=""
+                        width={100}
+                        height={100}
+                        priority
+                        objectFit="cover"
+                        onClick={handleMapImageClick}
+                    />
+                </div>
+            </div>
+
+            {showMapModal && <Modal images={["/images/map.png"]} onClose={handleCloseMapModal} />}
+
+            <div className={styles.description}>
+                <p>
+                    부천시 소사구 소사본동 65-7 (경인로 386)<br/>MJ 컨벤션 5층 그랜드볼룸
+                </p>
+            </div>
+
+            <a href="https://place.map.kakao.com/27339651" className={styles.mapButton}>
+                <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#1199EE">
+                    <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="currentColor"></path>
+                    <path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                </svg>
+                {kakaoMapText1}
+            </a>
+            <a href="https://map.naver.com/v5/entry/place/37537597" className={styles.mapButton}>
+                <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#66BB66">
+                    <path d="M20 10c0 4.418-8 12-8 12s-8-7.582-8-12a8 8 0 1116 0z" stroke="currentColor"></path>
+                    <path d="M12 11a1 1 0 100-2 1 1 0 000 2z" fill="currentColor" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                </svg>
+                {naverMapText1}
+            </a>
+
             <hr className={styles.main}/>
 
-            <h2>마음 전하실 곳</h2>
+            <h2>마음 전하실 곳 💌</h2>
+            <div className={styles.gift}>
+                <p>
+                    <strong>🤵🏻신랑측</strong>
+                    <br/>
+                    (김경태) 국민은행 696301-01-408276
+                    <button aria-label="복사" className={styles.copy}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                    <br/>
+                    <a href="http://kko.to/PGiGunjF-u">
+                        <img src="/images/kakaopay-logo.png" height="17"/>
+                    </a>
+                    <br/>
+                    (김완태) 씨티은행 503-02-145992
+                    <button aria-label="복사" className={styles.copy}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                </p>
+                <p>
+                    <strong>👰🏻️신부측</strong>
+                    <br/>
+                    (김혜진) 카카오뱅크 3333-06-3421738
+                    <button aria-label="복사" className={styles.copy}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                    <br/>
+                    (김영길) 농협 333055-52-000717
+                    <button aria-label="복사" className={styles.copy}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                </p>
+            </div>
 
             <hr className={styles.main}/>
 
             <h2>축하의 한마디</h2>
+
+            <div className={styles.visitorsHeader}>
+                <p>🤵🏻신랑측</p>
+                <p>신부측👰🏻️</p>
+            </div>
+
+            <div className={styles.visitors}>
+
+            </div>
 
         </main>
     )
