@@ -47,7 +47,7 @@ export default function Home() {
 
     const nameStyle: React.CSSProperties = {
         paddingLeft: '10px',
-        fontSize: '21px'
+        fontSize: '20px'
     };
 
     return (
