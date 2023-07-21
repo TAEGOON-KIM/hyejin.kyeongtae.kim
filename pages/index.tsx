@@ -227,14 +227,14 @@ export default function Home() {
 
             <h2>축하의 한마디</h2>
 
-            <div className={styles.visitorsHeader}>
+            {/* <div className={styles.visitorsHeader}>
                 <p>🤵🏻신랑측</p>
                 <p>신부측👰🏻️</p>
             </div>
 
             <div className={styles.visitors}>
 
-            </div>
+            </div> */}
 
         </main>
     )
