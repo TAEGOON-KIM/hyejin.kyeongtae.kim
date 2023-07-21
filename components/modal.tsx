@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ images, onClose }) => {
           
         </button>
       </div> */}
-      
+
       <div className={styles.modalContent}>
         <div className={styles.sliderWrapper}>
           <Slider {...settings} ref={sliderRef}>
@@ -56,7 +56,7 @@ const Modal: React.FC<ModalProps> = ({ images, onClose }) => {
           </Slider>
         </div>
       </div>
-      
+
       {/* <div className={styles.buttonsDivBottom}>
         <button className={styles.prevButton} onClick={handlePrev}>
           

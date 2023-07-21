@@ -66,10 +66,10 @@ export default function Home() {
             <h1 className={styles.header}>
                 김경태<hr />김혜진
             </h1>
-            
+
             <div className={styles.coverPicWrap}>
                 <div className={styles.divStyle}>
-                    <div className={styles.divStyle2}>    
+                    <div className={styles.divStyle2}>
                         <svg className={styles.coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="100%" height="100%">
                             <circle cx="2" cy="1.5" r="1.2" fill="red" />
                         </svg>
@@ -96,37 +96,37 @@ export default function Home() {
 
             <div className={styles.description}>
                 <p>
-                    2024년 5월 4일 토요일 오후 1시 10분<br/>MJ 컨벤션 5층 그랜드볼룸
+                    2024년 5월 4일 토요일 오후 1시 10분<br />MJ 컨벤션 5층 그랜드볼룸
                 </p>
             </div>
-            
-            <hr className={styles.main}/>
-            
+
+            <hr className={styles.main} />
+
             <h2>결혼합니다.</h2>
-            
+
             <p className={styles.comment}>
-                봄의 그대는 벚꽃이었고<br/>
-                여름의 그대는 바람이었으며<br/>
-                가을의 그대는 하늘이었고<br/>
-                겨울의 그대는 하얀 눈이었다<br/>
-                그대는 언제나 행복, 그 자체였다<br/>
+                봄의 그대는 벚꽃이었고<br />
+                여름의 그대는 바람이었으며<br />
+                가을의 그대는 하늘이었고<br />
+                겨울의 그대는 하얀 눈이었다<br />
+                그대는 언제나 행복, 그 자체였다<br />
 
-                - 강현욱, 사계 中 -<br/><br/>
+                - 강현욱, 사계 中 -<br /><br />
 
-                초록빛 싱그러움이 가득한 5월의 봄날,<br/>
-                사랑하는 두 사람이 같은 곳을 바라보며<br/>
-                평생 함께 걷고자 합니다.<br/>
-                아름답고 행복한 가정 가꾸어 나갈 수 있도록<br/>
-                부디 자리하시어 축복해 주시면<br/>
+                초록빛 싱그러움이 가득한 5월의 봄날,<br />
+                사랑하는 두 사람이 같은 곳을 바라보며<br />
+                평생 함께 걷고자 합니다.<br />
+                아름답고 행복한 가정 가꾸어 나갈 수 있도록<br />
+                부디 자리하시어 축복해 주시면<br />
                 더없는 기쁨으로 간직하겠습니다.
             </p>
 
             <p className={styles.comment}>
-                <span>김완태 · 정민화</span> 의 차남 <span style={nameStyle}>{groomName}</span> <br/>
+                <span>김완태 · 정민화</span> 의 차남 <span style={nameStyle}>{groomName}</span> <br />
                 <span>김영길 · 최종랑</span> 의 장녀 <span style={nameStyle}>{brideName}</span>
             </p>
 
-            <hr className={styles.main}/>
+            <hr className={styles.main} />
 
             <ul className={styles.photoGrid}>
                 {photos.map((photo) => (
@@ -138,7 +138,7 @@ export default function Home() {
 
             {showModal && <Modal images={photos} onClose={handleCloseModal} />}
 
-            <hr className={styles.main}/>
+            <hr className={styles.main} />
 
             <h2>오시는 길</h2>
 
@@ -167,7 +167,7 @@ export default function Home() {
 
             <div className={styles.description}>
                 <p>
-                    부천시 소사구 소사본동 65-7 (경인로 386)<br/>MJ 컨벤션 5층 그랜드볼룸
+                    부천시 소사구 소사본동 65-7 (경인로 386)<br />MJ 컨벤션 5층 그랜드볼룸
                 </p>
             </div>
 
@@ -186,13 +186,13 @@ export default function Home() {
                 {naverMapText1}
             </a>
 
-            <hr className={styles.main}/>
+            <hr className={styles.main} />
 
             <h2>마음 전하실 곳 💌</h2>
             <div className={styles.gift}>
                 <p>
                     <strong>🤵🏻신랑측</strong>
-                    <br/>
+                    <br />
                     (김경태) {accountNumberKT}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberKT)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
@@ -200,11 +200,11 @@ export default function Home() {
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                         </svg>
                     </button>
-                    <br/>
+                    <br />
                     <a href="http://kko.to/PGiGunjF-u">
-                        <img src="/images/kakaopay-logo.png" height="17"/>
+                        <img src="/images/kakaopay-logo.png" height="17" />
                     </a>
-                    <br/>
+                    <br />
                     (김완태) {accountNumberWT}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberWT)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
@@ -212,7 +212,7 @@ export default function Home() {
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                         </svg>
                     </button>
-                    <br/>
+                    <br />
                     (정민화) {accountNumberMH}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberMH)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
@@ -223,7 +223,7 @@ export default function Home() {
                 </p>
                 <p>
                     <strong>👰🏻️신부측</strong>
-                    <br/>
+                    <br />
                     (김혜진) {accountNumberHJ}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberHJ)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
@@ -231,7 +231,7 @@ export default function Home() {
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                         </svg>
                     </button>
-                    <br/>
+                    <br />
                     (김영길) {accountNumberYG}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberYG)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
@@ -242,7 +242,7 @@ export default function Home() {
                 </p>
             </div>
 
-            <hr className={styles.main}/>
+            <hr className={styles.main} />
 
             {/* <h2>축하의 한마디</h2> */}
 
