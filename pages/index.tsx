@@ -225,7 +225,7 @@ export default function Home() {
 
             <hr className={styles.main}/>
 
-            <h2>축하의 한마디</h2>
+            {/* <h2>축하의 한마디</h2> */}
 
             {/* <div className={styles.visitorsHeader}>
                 <p>🤵🏻신랑측</p>
