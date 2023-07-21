@@ -29,6 +29,12 @@ export default function Home() {
     const kakaoMapText1 = " 카카오맵";
     const naverMapText1 = " 네이버지도";
 
+    const accountNumberKT = "국민은행 696301-01-408276";
+    const accountNumberWT = "씨티은행 503-02-145992";
+    const accountNumberMH = "농협 141-02-389140";
+    const accountNumberHJ = "카카오뱅크 3333-06-3421738";
+    const accountNumberYG = "농협 333055-52-000717";
+
     const handleImageClick = () => {
         setShowModal(true);
     };
@@ -43,6 +49,11 @@ export default function Home() {
 
     const handleCloseMapModal = () => {
         setShowMapModal(false);
+    };
+
+    const handleCopy = (accountNumber: string) => {
+        navigator.clipboard.writeText(accountNumber);
+        alert("계좌번호가 복사 되었습니다. \n" + accountNumber);
     };
 
     const nameStyle: React.CSSProperties = {
@@ -182,8 +193,8 @@ export default function Home() {
                 <p>
                     <strong>🤵🏻신랑측</strong>
                     <br/>
-                    (김경태) 국민은행 696301-01-408276
-                    <button aria-label="복사" className={styles.copy}>
+                    (김경태) {accountNumberKT}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberKT)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
                             <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
@@ -194,8 +205,16 @@ export default function Home() {
                         <img src="/images/kakaopay-logo.png" height="17"/>
                     </a>
                     <br/>
-                    (김완태) 씨티은행 503-02-145992
-                    <button aria-label="복사" className={styles.copy}>
+                    (김완태) {accountNumberWT}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberWT)}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                    <br/>
+                    (정민화) {accountNumberMH}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberMH)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
                             <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
@@ -205,16 +224,16 @@ export default function Home() {
                 <p>
                     <strong>👰🏻️신부측</strong>
                     <br/>
-                    (김혜진) 카카오뱅크 3333-06-3421738
-                    <button aria-label="복사" className={styles.copy}>
+                    (김혜진) {accountNumberHJ}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberHJ)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
                             <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                         </svg>
                     </button>
                     <br/>
-                    (김영길) 농협 333055-52-000717
-                    <button aria-label="복사" className={styles.copy}>
+                    (김영길) {accountNumberYG}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberYG)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
                             <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
