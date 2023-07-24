@@ -259,7 +259,7 @@ export default function Home() {
             </div> */}
 
 
-            <div className={styles.visitorsWrap}>
+            {/* <div className={styles.visitorsWrap}>
                 <h2>축하의 한마디</h2>
 
                 <div className={styles.visitorsSendMsg}>
@@ -270,7 +270,7 @@ export default function Home() {
                 <div className={styles.visitosMsg}>
 
                 </div>
-            </div>
+            </div> */}
 
         </main>
     )
