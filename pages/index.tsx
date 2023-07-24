@@ -21,6 +21,7 @@ export default function Home() {
         '/photos/p12.jpg',
     ];
 
+    const [currentImage, setCurrentImage] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const [showMapModal, setShowMapModal] = useState(false);
 
@@ -35,7 +36,9 @@ export default function Home() {
     const accountNumberHJ = "카카오뱅크 3333-06-3421738";
     const accountNumberYG = "농협 333055-52-000717";
 
-    const handleImageClick = () => {
+    const handleImageClick = (index: number) => {
+        console.log(index);
+        setCurrentImage(index);
         setShowModal(true);
     };
 
@@ -129,14 +132,14 @@ export default function Home() {
             <hr className={styles.main} />
 
             <ul className={styles.photoGrid}>
-                {photos.map((photo) => (
+                {photos.map((photo, index) => (
                     <li key={photo}>
-                        <img src={photo} loading="lazy" alt="Photo" className={styles.image} onClick={handleImageClick} />
+                        <img src={photo} loading="lazy" alt="Photo" className={styles.image} onClick={() => handleImageClick(index)} />
                     </li>
                 ))}
             </ul>
 
-            {showModal && <Modal images={photos} onClose={handleCloseModal} />}
+            {showModal && <Modal images={photos} onClose={handleCloseModal} current={currentImage}/>}
 
             <hr className={styles.main} />
 
@@ -163,7 +166,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {showMapModal && <Modal images={["/images/map.png"]} onClose={handleCloseMapModal} />}
+            {showMapModal && <Modal images={["/images/map.png"]} onClose={handleCloseMapModal} current={0}/>}
 
             <div className={styles.description}>
                 <p>
@@ -254,6 +257,20 @@ export default function Home() {
             <div className={styles.visitors}>
 
             </div> */}
+
+
+            <div className={styles.visitorsWrap}>
+                <h2>축하의 한마디</h2>
+
+                <div className={styles.visitorsSendMsg}>
+
+
+                </div>
+
+                <div className={styles.visitosMsg}>
+
+                </div>
+            </div>
 
         </main>
     )

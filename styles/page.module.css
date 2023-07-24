@@ -255,6 +255,12 @@
   margin-left: 5px;
 }
 
+.visitorsWrap {
+  background-color: #eaeaea;
+  padding: 10px;
+}
+
+
 .visitorsHeader {
   padding: 0px 20px;
   margin-top: -68px;
