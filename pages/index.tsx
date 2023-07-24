@@ -71,7 +71,7 @@ export default function Home() {
                 <div className={styles.divStyle}>
                     <div className={styles.divStyle2}>
                         <svg className={styles.coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="100%" height="100%">
-                            <circle cx="2" cy="1.5" r="1.2" fill="red" />
+                            {/* <circle cx="2" cy="1.5" r="1.2" fill="red" /> */}
                         </svg>
                     </div>
 
@@ -146,7 +146,7 @@ export default function Home() {
                 <div className={styles.mapDivStyle}>
                     <div className={styles.mapDivStyle2}>
                         <svg className={styles.mapImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3111 1497" width="100%" height="100%">
-                            <circle cx="2" cy="1.5" r="1.2" fill="red" />
+                            {/* <circle cx="2" cy="1.5" r="1.2" fill="red" /> */}
                         </svg>
                     </div>
 
