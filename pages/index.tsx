@@ -162,11 +162,9 @@ export default function Home() {
                     <Image
                         className={styles.mapPictureStyle}
                         src="/images/map.png"
-                        alt=""
+                        alt="map"
                         width={100}
                         height={100}
-                        // priority
-                        // layout="fill"
                         onClick={handleMapImageClick}
                     />
                 </div>
