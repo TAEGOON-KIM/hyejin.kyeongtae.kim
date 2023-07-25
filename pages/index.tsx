@@ -23,6 +23,7 @@ export default function Home() {
 
     const [currentImage, setCurrentImage] = useState(0);
     const [showModal, setShowModal] = useState(false);
+    const [showCoverModal, setShowCoverModal] = useState(false);
     const [showMapModal, setShowMapModal] = useState(false);
 
     const groomName = "경태";
@@ -36,6 +37,7 @@ export default function Home() {
     const accountNumberHJ = "카카오뱅크 3333-06-3421738";
     const accountNumberYG = "농협 333055-52-000717";
 
+    /* photoGrid */
     const handleImageClick = (index: number) => {
         setCurrentImage(index);
         setShowModal(true);
@@ -45,6 +47,16 @@ export default function Home() {
         setShowModal(false);
     };
 
+    /* Cover Image */
+    const handleCoverImageClick = () => {
+        setShowCoverModal(true);
+    };
+
+    const handleCloseCoverModal = () => {
+        setShowCoverModal(false);
+    };
+
+    /* Map Image */
     const handleMapImageClick = () => {
         setShowMapModal(true);
     };
@@ -53,6 +65,7 @@ export default function Home() {
         setShowMapModal(false);
     };
 
+    /* Copy button */
     const handleCopy = (accountNumber: string) => {
         navigator.clipboard.writeText(accountNumber);
         alert("계좌번호가 복사 되었습니다. \n" + accountNumber);
@@ -83,20 +96,12 @@ export default function Home() {
                         alt="cover"
                         width={100}
                         height={100}
-                        //priority
-                        // layout="fill"
-                        // objectFit="cover"
-                        // objectPosition="center"
+                        onClick={handleCoverImageClick}
                     />
                 </div>
-
-                {/* <div className={styles.coverHeader}>
-                    <span>김경태</span>
-                    <hr />
-                    <span>김혜진</span>
-                </div> */}
-
             </div>
+
+            {showCoverModal && <Modal images={["/images/cover.jpg"]} onClose={handleCloseCoverModal} current={0}/>}
 
             <div className={styles.description}>
                 <p>
