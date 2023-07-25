@@ -278,6 +278,10 @@ export default function Home() {
                 </div>
             </div> */}
 
+            <div className={styles.thankYou}>
+                감사합니다.
+            </div>
+
         </main>
     )
 }
