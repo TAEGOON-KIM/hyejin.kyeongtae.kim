@@ -37,7 +37,6 @@ export default function Home() {
     const accountNumberYG = "농협 333055-52-000717";
 
     const handleImageClick = (index: number) => {
-        console.log(index);
         setCurrentImage(index);
         setShowModal(true);
     };
@@ -81,11 +80,13 @@ export default function Home() {
                     <Image
                         className={styles.coverPictureStyle}
                         src="/images/cover.jpg"
-                        alt=""
+                        alt="cover"
                         width={100}
                         height={100}
-                        priority
-                        objectFit="cover"
+                        //priority
+                        // layout="fill"
+                        // objectFit="cover"
+                        // objectPosition="center"
                     />
                 </div>
 
@@ -159,8 +160,8 @@ export default function Home() {
                         alt=""
                         width={100}
                         height={100}
-                        priority
-                        objectFit="cover"
+                        // priority
+                        // layout="fill"
                         onClick={handleMapImageClick}
                     />
                 </div>
