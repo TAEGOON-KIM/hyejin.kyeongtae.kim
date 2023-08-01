@@ -46,13 +46,6 @@ const Modal: React.FC<ModalProps> = ({ images, onClose, current }) => {
     <div className={styles.modal} onClick={onClose}>
       <div className={styles.modalContent}>
         <div className={styles.sliderWrapper}>
-          {/* <Slider {...sliderSettings} ref={sliderRef} initialSlide={current || 0}>
-            {images.map((image, index) => (
-              <div key={index} className={styles.slideItem}>
-                <img src={image} alt={`Slide ${index}`} />
-              </div>
-            ))}
-          </Slider> */}
           <Slider {...sliderSettings} initialSlide={current || 0}>
             {images.map((image, index) => (
               <div key={index} className={styles.slideItem}>
