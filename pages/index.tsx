@@ -36,6 +36,7 @@ export default function Home() {
     const accountNumberMH = "농협 141-02-389140";
     const accountNumberHJ = "카카오뱅크 3333-06-3421738";
     const accountNumberYG = "농협 333055-52-000717";
+    const accountNumberJR = "신한 110-382-868229";
 
     /* photoGrid */
     const handleImageClick = (index: number) => {
@@ -241,6 +242,14 @@ export default function Home() {
                     <br />
                     (김영길) {accountNumberYG}
                     <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberYG)}>
+                        <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
+                            <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                            <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
+                        </svg>
+                    </button>
+                    <br />
+                    (최종랑) {accountNumberJR}
+                    <button aria-label="복사" className={styles.copy} onClick={() => handleCopy(accountNumberJR)}>
                         <svg width="1.5em" height="1.5em" strokeWidth={1.5} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="currentColor">
                             <path d="M19.4 20H9.6a.6.6 0 01-.6-.6V9.6a.6.6 0 01.6-.6h9.8a.6.6 0 01.6.6v9.8a.6.6 0 01-.6.6z" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
                             <path d="M15 9V4.6a.6.6 0 00-.6-.6H4.6a.6.6 0 00-.6.6v9.8a.6.6 0 00.6.6H9" stroke="currentColor" strokeLinecap='round' strokeLinejoin='round'></path>
