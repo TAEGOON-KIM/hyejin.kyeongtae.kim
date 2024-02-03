@@ -7,7 +7,8 @@ import RootLayout from '../components/layout';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <RootLayout children={undefined}>
+      <RootLayout>
+
       </RootLayout>
       <Component {...pageProps} />
     </>
