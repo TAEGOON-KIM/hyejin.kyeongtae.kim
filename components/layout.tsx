@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="김경태 ❤️ 김혜진 청첩장" />
         <meta property="og:description" content="5월 4일 1:10PM @ MJ 컨벤션 - 소사역" />
-        <meta property="og:image" content="https://hyejin-kyeongtae-kim-weddingcard.vercel.app/images/cover.jpg" />
+        <meta property="og:image" content="https://hyejin-kyeongtae-kim-wedding-inv.vercel.app/images/cover.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
