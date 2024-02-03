@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 
 export default function Home() {
     const photos = [
-        '/photos/p0.jpg',
         '/photos/p1.jpg',
         '/photos/p2.jpg',
         '/photos/p3.jpg',
@@ -19,6 +18,7 @@ export default function Home() {
         '/photos/p10.jpg',
         '/photos/p11.jpg',
         '/photos/p12.jpg',
+        '/photos/p13.jpg',
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -86,7 +86,7 @@ export default function Home() {
             <div className={styles.coverPicWrap}>
                 <div className={styles.divStyle}>
                     <div className={styles.divStyle2}>
-                        <svg className={styles.coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 3" width="100%" height="100%">
+                        <svg className={styles.coverImgStyle} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 3" width="100%" height="100%">
                             {/* <circle cx="2" cy="1.5" r="1.2" fill="red" /> */}
                         </svg>
                     </div>
