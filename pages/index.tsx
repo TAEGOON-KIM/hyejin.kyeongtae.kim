@@ -31,12 +31,19 @@ export default function Home() {
     const kakaoMapText1 = " 카카오맵";
     const naverMapText1 = " 네이버지도";
 
-    const accountNumberKT = "국민은행 696301-01-408276";
-    const accountNumberWT = "씨티은행 324-86345-263";
-    const accountNumberMH = "농협 141-02-389140";
-    const accountNumberHJ = "카카오뱅크 3333-06-3421738";
-    const accountNumberYG = "농협 333055-52-000717";
-    const accountNumberJR = "신한 110-382-868229";
+    const accountNumberKT = "";
+    const accountNumberWT = "";
+    const accountNumberMH = "";
+    const accountNumberHJ = "";
+    const accountNumberYG = "";
+    const accountNumberJR = "";
+
+    // const accountNumberKT = "국민은행 696301-01-408276";
+    // const accountNumberWT = "씨티은행 324-86345-263";
+    // const accountNumberMH = "농협 141-02-389140";
+    // const accountNumberHJ = "카카오뱅크 3333-06-3421738";
+    // const accountNumberYG = "농협 333055-52-000717";
+    // const accountNumberJR = "신한 110-382-868229";
 
     /* photoGrid */
     const handleImageClick = (index: number) => {
